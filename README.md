@@ -1,5 +1,13 @@
 # Apache2VirtualHost
 Create a Apache2 Virtualhost, Domain, Document Root and Index page using user input.
+
+Prerequsistes:
+
+Require Apache2 to be installed as we need to reload the Apache config file.
+If your using Ubuntu then install using apt.
+
+sudo apt-get install -y apache2
+
 This is a generic index page template.
 
 Creating an Apache virtual host using a bash script involves taking user input for 
