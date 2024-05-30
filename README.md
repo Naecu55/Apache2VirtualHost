@@ -1,10 +1,11 @@
 # Apache2VirtualHost
-Createa Apache2 Virtualhost, Domain, Document Root and Index page using user input.
+Create a Apache2 Virtualhost, Domain, Document Root and Index page using user input.
+This is a generic index page template.
 
 Creating an Apache virtual host using a bash script involves taking user input for 
 key parameters (like domain name and document root), then creating the necessary configuration file and directories, and enabling the site. Below is a bash script that accomplishes this:
 
---
+--------------------------- start of code ----------------------------------- 
 
 #!/bin/bash
 
@@ -55,7 +56,7 @@ create_virtual_host() {
 # Run the function to create the virtual host
 create_virtual_host
 
---
+--------------------------- end of code ----------------------------------- 
 
 Instructions
 
