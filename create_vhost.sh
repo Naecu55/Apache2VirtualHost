@@ -8,7 +8,7 @@ create_virtual_host() {
   :
   read -p "Enter the domain name (e.g., example.com): " domain
   read -p "Enter the document root (e.g., /var/www/html/example.com): " doc_root
-  read -p "Enter the token api id (e.g., 'gsfxnbvajdkuaafjahgs3': " token_id
+  read -p "Enter the token api id (e.g., 'Digitalsquirrel': " token_id
   read -p "Enter the token api (e.g., 'gsfxnbvajdkuaafjahgs3': " token_api
 
   # Check if the document root exists; if not, create it
@@ -18,7 +18,7 @@ create_virtual_host() {
   fi
 
   # Create a sample index.html file in the document root
-  # Add token_api
+  # Add token_id and token_api
 
 #echo "<html><body><h1>Welcome to $domain!</h1><p>API Token:$token_api</p></body></html>" > "$doc_root/index.html"
 # cat >> $doc_root/index.html << EOF
@@ -53,6 +53,7 @@ echo "<html>
 
     # Enable the new virtual host
   a2ensite "$domain.conf"
+
   echo "Enabled the virtual host: $domain"
 
   # Test Apache configuration and reload if successful
