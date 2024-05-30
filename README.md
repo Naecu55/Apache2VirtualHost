@@ -6,13 +6,12 @@ Creating an Apache virtual host using a bash script involves taking user input f
 key parameters (like domain name and document root), then creating the necessary configuration file and directories, and enabling the site. Below is a bash script that accomplishes this:
 
 Run the function to create the virtual host
-./create_virtual_host
 
---------------------------- end of code ----------------------------------- 
+./create_virtual_host
 
 Instructions
 
-Due to permissions best elavate yourself to root.
+Due to permissions best elavate yourself to root as you will need to create a file im /etc directory.
 
 Save the script above to a file, for example, create_vhost.sh.
 
