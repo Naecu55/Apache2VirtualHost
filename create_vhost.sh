@@ -1,15 +1,17 @@
 #!/bin/bash
 # ./create_virtual_host
 # Created by Chuck Thu May 30 08:12:03 BST 2024
-# Function to create Apache Virtual Host with a clients token id and token.
+# Function to create Apache Virtual Host with user input for domain, doc root path,
+
+ client id and client secret.
 
 create_virtual_host() {
   # Prompt the user for input, enter domain, document root and token api.
-  :
+  
   read -p "Enter the domain name (e.g., example.com): " domain
   read -p "Enter the document root (e.g., /var/www/html/example.com): " doc_root
-  read -p "Enter the token api id (e.g., 'Digitalsquirrel': " token_id
-  read -p "Enter the token api (e.g., 'gsfxnbvajdkuaafjahgs3': " token_api
+  read -p "Enter the client id (e.g., 'Digitalsquirrel': " client_id
+  read -p "Enter the client secret (e.g., 'gsfxnbvajdkuaafjahgs3': " client_secret
 
   # Check if the document root exists; if not, create it
   if [ ! -d "$doc_root" ]; then
@@ -18,7 +20,7 @@ create_virtual_host() {
   fi
 
   # Create a sample index.html file in the document root
-  # Add token_id and token_api
+  # Add client id and client secret
 
 #echo "<html><body><h1>Welcome to $domain!</h1><p>API Token:$token_api</p></body></html>" > "$doc_root/index.html"
 # cat >> $doc_root/index.html << EOF
@@ -29,8 +31,8 @@ echo "<html>
   </head>
   <body><h1> Require Clients Token id and Token api!<\h1>
    <p> Please Provide these API information</p>
-    <div id="token_id">$token_id</div>
-    <div id="token_api">$token_api</div>
+    <div id="client_id">$client_id</div>
+    <div id="client_secret">$client_secret</div>
   </body>
 </html>" > "$doc_root/index.html"
 
