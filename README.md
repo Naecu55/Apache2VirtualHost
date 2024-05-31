@@ -1,5 +1,5 @@
 # Apache2VirtualHost
-Create a Apache2 Virtualhost, Domain, Document Root and Index page using user input.
+Create a Apache2 Virtualhost, Domain, Document Root, client details and Index page using user input.
 
 Prerequsistes:
 
